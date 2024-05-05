@@ -1,16 +1,17 @@
 {
   "name": "backend-haki-lppm",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "back-end tugas akhir sistem informasi haki di lppm unand",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js",
+    "dev": "nodemon index.js",
     "start": "node index.js"
   },
   "author": "akmal, kemal",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "sequelize-cli": "^6.6.2"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
