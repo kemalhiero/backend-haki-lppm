@@ -9,15 +9,6 @@ module.exports = {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4
       },
-      idPernyataanPengajuan: {
-        type: Sequelize.UUID,
-        references: {
-          model: 'pernyataanPengajuans',
-          key: 'id'
-        },
-        onDelete: 'NO ACTION',
-        onUpdate: 'CASCADE'
-      },
       jenisHaki: {
         type: Sequelize.ENUM('merek', 'desain-industri', 'hak-cipta-non-buku', 'hak-cipta-buku', 'paten')
       },
@@ -28,6 +19,15 @@ module.exports = {
         type: Sequelize.STRING
       },
       deskripsi: {
+        type: Sequelize.STRING
+      },
+      suratPernyataanKetuaLppm: {
+        type: Sequelize.STRING
+      },
+      suratPernyataanHakCiptaPencipta: {
+        type: Sequelize.STRING
+      },
+      suratPengalihanHakCipta: {
         type: Sequelize.STRING
       },
       createdAt: {

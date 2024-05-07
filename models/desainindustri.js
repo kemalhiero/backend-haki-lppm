@@ -10,8 +10,9 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.hasOne(models.klaimDesainIndustri, {foreignKey: 'idKlaim'});
-      this.hasOne(models.locarnoClass, {foreignKey: 'idLocarnoClass'});
+      this.belongsTo(models.klaimDesainIndustri, {foreignKey: 'idKlaim'});
+      this.belongsTo(models.locarnoClass, {foreignKey: 'idLocarnoClass'});
+      this.belongsTo(models.pengajuan, {foreignKey: 'idPengajuan'});
     }
   }
   desainIndustri.init({
