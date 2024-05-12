@@ -1,10 +1,11 @@
-require('dotenv').config()
-const express = require('express');
-const app = express();
+import 'dotenv/config'
+import express, { json } from 'express';
+import userRoutes from './routes/userRoutes.js';
 
+const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json());
+app.use(json());
 
 //halaman root
 app.get('/', (req, res) => {
@@ -12,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 // Router
-app.use('/api/v1/user', require('./routes/userRoutes'))
+app.use('/api/v1/user', userRoutes)
 
 // Server
 app.listen(port, () => {

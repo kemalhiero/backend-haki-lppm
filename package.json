@@ -2,6 +2,7 @@
   "name": "backend-haki-lppm",
   "version": "0.0.1",
   "description": "back-end tugas akhir sistem informasi haki di lppm unand",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
