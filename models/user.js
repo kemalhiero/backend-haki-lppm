@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasOne(models.detailUser, {foreignKey: 'idUser'});
+      this.hasMany(models.tokenSession, {foreignKey: 'idUser'});
       this.belongsToMany(models.pengajuan, { through: 'detailPengajuan', foreignKey: 'idUser' });
     }
   }
